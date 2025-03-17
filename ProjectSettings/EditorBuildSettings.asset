@@ -12,9 +12,9 @@ EditorBuildSettings:
     path: Assets/DI/Scene/Empty.unity
     guid: 26baf946b77057547bcf87822cb6bbb5
   - enabled: 1
-    path: Assets/_Quest/Scenes/MainMenu.unity
+    path: Assets/_Game/Scenes/MainMenu.unity
     guid: 4223291b45eb1bc41a424567ba828211
   - enabled: 1
-    path: Assets/_Quest/Scenes/Gameplay.unity
+    path: Assets/_Game/Scenes/Gameplay.unity
     guid: 98c63e61c0fcb5a47b598d7755b429ce
   m_configObjects: {}
