@@ -15,7 +15,7 @@ public class TopView : MonoBehaviour
 
     private ReactiveUI<int> _healthReactive, _damageReactive, _moneyReactive;
 
-    public void Init(GameplaySaves saves, ReactivaUiFormatFabric formatFabric)
+    public void Init(GameplaySaves saves, ReactiveUiFormatFabric formatFabric)
     {
         _moneyReactive = new ReactiveUI<int>(saves.Money, formatFabric.GetNormalFormat);
     }

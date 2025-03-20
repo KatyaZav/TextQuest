@@ -1,4 +1,4 @@
-public class ReactivaUiFormatFabric
+public class ReactiveUiFormatFabric
 {
     private const string GreyColor = "#949494";
     private const string GreenColor = "#00FF1C";
