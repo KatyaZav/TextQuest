@@ -1,6 +1,5 @@
 using DI.Game.Develop.Utils.Reactive;
 using System;
-using Unity.Collections.LowLevel.Unsafe;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -10,9 +9,10 @@ public class ReactiveUI<T> : IDisposable where T : IComparable<T>
     
     private Func<T, T, string> _formatText;
 
-    public ReactiveUI(IReadOnlyVariable<T> varible, Func<T, T, string> formatText)
+    public ReactiveUI(IReadOnlyVariable<T> varible, Text text, Func<T, T, string> formatText)
     {
         _variable = varible;
+        _text = text;
         _formatText = formatText;
         _text.text = varible.Value.ToString();
 

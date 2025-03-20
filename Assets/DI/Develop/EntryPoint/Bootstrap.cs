@@ -26,7 +26,7 @@ namespace DI.Game.Develop.EntryPoint
             container.Resolve<ConfigsProviderService>().LoadAll();
             container.Resolve<PlayerDataProvider>().Load();
 
-            yield return new WaitForSeconds(1.5f);//инициализация какого-то процесса инициализация
+            yield return new WaitUntil(() => YG.YandexGame.SDKEnabled);//инициализация какого-то процесса инициализация
 
             Debug.Log("Завершается инициализация сервисов проекта, начинается переход на какую-то сцену");
 
