@@ -605,6 +605,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2044922699860532368, guid: abaa40d10d248fa479da64701e2d31e4, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: b52b218433118b343b6094f4a849e4eb, type: 3}
     - target: {fileID: 5097479127917215812, guid: abaa40d10d248fa479da64701e2d31e4, type: 3}
       propertyPath: m_Name
       value: TavernButton
@@ -655,7 +659,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 0.0015106, y: 105}
+  m_AnchoredPosition: {x: 0.0015106, y: 82}
   m_SizeDelta: {x: 1080, y: 301.206}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &317633771
@@ -854,7 +858,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: e11c82ca45931644598c0f7f9c48f3c1, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 174844f804fbac849a05055255554710, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1143,6 +1147,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2044922699860532368, guid: abaa40d10d248fa479da64701e2d31e4, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 62d45a83d1e3c89418abd67c4fde0ee1, type: 3}
     - target: {fileID: 5097479127917215812, guid: abaa40d10d248fa479da64701e2d31e4, type: 3}
       propertyPath: m_Name
       value: TowerHallButton
@@ -1536,6 +1544,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2044922699860532368, guid: abaa40d10d248fa479da64701e2d31e4, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: db06b0777203c794b914f315f849dd70, type: 3}
     - target: {fileID: 5097479127917215812, guid: abaa40d10d248fa479da64701e2d31e4, type: 3}
       propertyPath: m_Name
       value: Knights
@@ -2071,7 +2083,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1012117583
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2581,6 +2593,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2044922699860532368, guid: abaa40d10d248fa479da64701e2d31e4, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: d0a6ac243df39624c800d56fe9faadbf, type: 3}
     - target: {fileID: 5097479127917215812, guid: abaa40d10d248fa479da64701e2d31e4, type: 3}
       propertyPath: m_Name
       value: Wizards
@@ -3068,7 +3084,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 88, y: -181}
+  m_AnchoredPosition: {x: 96, y: -181}
   m_SizeDelta: {x: 247.21338, y: 553.9288}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1001 &2095095082
@@ -3157,6 +3173,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1658892902297622805, guid: abaa40d10d248fa479da64701e2d31e4, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2044922699860532368, guid: abaa40d10d248fa479da64701e2d31e4, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 4a0ab1fd2fca2bc4bb591978c6bff612, type: 3}
+    - target: {fileID: 2044922699860532368, guid: abaa40d10d248fa479da64701e2d31e4, type: 3}
+      propertyPath: m_UseSpriteMesh
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2044922699860532368, guid: abaa40d10d248fa479da64701e2d31e4, type: 3}
+      propertyPath: m_PreserveAspect
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5097479127917215812, guid: abaa40d10d248fa479da64701e2d31e4, type: 3}
@@ -3261,6 +3289,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2044922699860532368, guid: abaa40d10d248fa479da64701e2d31e4, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: d2b2f2fe62b849a4fb7f73ce9fd34007, type: 3}
     - target: {fileID: 3448275834795444674, guid: abaa40d10d248fa479da64701e2d31e4, type: 3}
       propertyPath: m_Colors.m_NormalColor.a
       value: 1
