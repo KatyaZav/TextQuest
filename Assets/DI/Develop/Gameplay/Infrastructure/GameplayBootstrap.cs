@@ -1,3 +1,4 @@
+using Assets.Gameplay.Data;
 using DI.Game.Develop.CommonServices.SceneManagment;
 using DI.Game.Develop.DI;
 using System;
@@ -26,6 +27,7 @@ namespace DI.Game.Develop.Gameplay.Infrastructure
         {
             _container.RegisterAsSingle(c => new ReactiveUiFormatFabric());
             _container.RegisterAsSingle(c => new GameplaySaves());
+            _container.RegisterAsSingle(c => new WeatherSystem());
 
             _container.Initialize();
         }
