@@ -1,26 +1,25 @@
-using Assets.Gameplay.Building;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+using Assets.Gameplay.Building.Entity;
 namespace Assets.Gameplay.Building
 {
     public class WizardHouseService : HouseBase
     {
-        public WizardHouseService(BuildingConfig buildingConfig, int level)
+        EntityDataConfig _startEntity;
+
+        private int _count;
+
+        public WizardHouseService(EntityDataConfig startEntity, BuildingConfig buildingConfig, int level)
             : base(buildingConfig, level)
         {
+            _startEntity = startEntity;
         }
 
-        // Start is called before the first frame update
-        void Start()
-        {
+        public int Count => _count;
 
-        }
+        public int GetHealth() =>
+            _startEntity.Health * Count;
 
-        // Update is called once per frame
-        void Update()
-        {
-
-        }
+        public int GetDamage() =>
+            _startEntity.Damage * Count;
+            
     }
 }

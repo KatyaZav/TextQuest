@@ -1,4 +1,5 @@
 using Assets.Gameplay.Building;
+using Assets.Gameplay.Building.Entity;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -7,20 +8,20 @@ namespace Assets.Gameplay.Building
 {
     public class KnightHouseService : HouseBase
     {
-        public KnightHouseService(BuildingConfig buildingConfig, int level) : base(buildingConfig, level)
+        EntityDataConfig _startEntity;
+        private int _count;
+
+        public KnightHouseService(EntityDataConfig startEntity, BuildingConfig buildingConfig, int level) : base(buildingConfig, level)
         {
+            _startEntity = startEntity;
         }
 
-        // Start is called before the first frame update
-        void Start()
-        {
+        public int Count => _count;
 
-        }
+        public int GetHealth() =>
+            (_startEntity.Health + Level.Value) * Count;
 
-        // Update is called once per frame
-        void Update()
-        {
-
-        }
+        public int GetDamage() =>
+            _startEntity.Damage * Count;
     }
 }
