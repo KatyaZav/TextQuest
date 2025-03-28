@@ -3,21 +3,24 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TavernService : HouseBase
+namespace Assets.Gameplay.Building
 {
-    public TavernService(BuildingConfig buildingConfig, int level) : base(buildingConfig, level)
+    public class TavernService : HouseBase
     {
-    }
+        public TavernService(BuildingConfig buildingConfig, int level) : base(buildingConfig, level)
+        {
+        }
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+        // Start is called before the first frame update
+        void Start()
+        {
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        }
+
+        // Update is called once per frame
+        void Update()
+        {
+
+        }
     }
 }

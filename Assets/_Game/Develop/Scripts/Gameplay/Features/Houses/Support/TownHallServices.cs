@@ -1,27 +1,30 @@
 using Assets.Gameplay.Building;
 
-public class TownHallServices : HouseBase
+namespace Assets.Gameplay.Building
 {
-    private int _percent = 10;
-
-    public TownHallServices(BuildingConfig buildingConfig, int level,
-        int percent, int currentMoney) : base(buildingConfig, level)
+    public class TownHallServices : HouseBase
     {
-        _percent = percent;
-        CurrentMoney = currentMoney;
-    }
+        private int _percent = 10;
 
-    public int CurrentMoney { get; private set; } = 0;
+        public TownHallServices(BuildingConfig buildingConfig, int level,
+            int percent, int currentMoney) : base(buildingConfig, level)
+        {
+            _percent = percent;
+            CurrentMoney = currentMoney;
+        }
 
-    public int CollectMoney()
-    {
-        int coins = CurrentMoney;
-        CurrentMoney = 0;
-        return coins;
-    }
+        public int CurrentMoney { get; private set; } = 0;
 
-    public void AddMoney()
-    {
+        public int CollectMoney()
+        {
+            int coins = CurrentMoney;
+            CurrentMoney = 0;
+            return coins;
+        }
 
+        public void AddMoney()
+        {
+
+        }
     }
 }

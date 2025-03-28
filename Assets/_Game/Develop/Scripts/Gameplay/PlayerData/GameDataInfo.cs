@@ -1,18 +1,19 @@
+using Assets.Gameplay.Building;
 using DI.Game.Develop.Utils.Reactive;
 
 namespace Assets.Gameplay.Data
 {
     public class GameDataInfo
     {
-        private GameplaySaves _saves;
+        private ArmyHolderService _armyHolder;
         private WeatherSystem _weatherSystem;
 
         private ReactiveVariable<int> _health = new ReactiveVariable<int>(0);
         private ReactiveVariable<int> _damage = new ReactiveVariable<int>(0);
 
-        public GameDataInfo(GameplaySaves saves, WeatherSystem weather)
+        public GameDataInfo(ArmyHolderService saves, WeatherSystem weather)
         {
-            _saves = saves;
+            _armyHolder = saves;
             _weatherSystem = weather;
         }
 
@@ -21,14 +22,8 @@ namespace Assets.Gameplay.Data
 
         public void UpdateHealth()
         {
-            int newHealth = 0;
-            int newDamage = 0;
-
-            for (var i = 0; i < _saves.Warriors.Count; i++)
-            {
-                newHealth += _saves.Warriors[i].Health;
-                newDamage += _saves.Warriors[i].Damage;
-            }
+            int newHealth = _armyHolder.GetAllHealth();
+            int newDamage = _armyHolder.GetAllDamage();
 
             _health.Value = newHealth;
             _damage.Value = newDamage;

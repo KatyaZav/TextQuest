@@ -1,25 +1,27 @@
-using Assets.Gameplay.Building;
 using DI.Game.Develop.Utils.Reactive;
 
-public class HouseBase
+namespace Assets.Gameplay.Building
 {
-    private BuildingConfig _buildingConfig;
-    private ReactiveVariable<int> _level;
-
-    public HouseBase(BuildingConfig buildingConfig, int level)
+    public class HouseBase
     {
-        _buildingConfig = buildingConfig;
-        _level = new ReactiveVariable<int>(level);
-    }
+        private BuildingConfig _buildingConfig;
+        private ReactiveVariable<int> _level;
 
-    public IReadOnlyVariable<int> Level => _level;
-    public bool CanUpgrade => _buildingConfig.CanUpgrade(Level.Value);
+        public HouseBase(BuildingConfig buildingConfig, int level)
+        {
+            _buildingConfig = buildingConfig;
+            _level = new ReactiveVariable<int>(level);
+        }
 
-    public void Upgrade()
-    {
-        if (CanUpgrade == false)
-            throw new System.Exception($"Can't upgrade building {_buildingConfig.BuildingName.English}");
+        public IReadOnlyVariable<int> Level => _level;
+        public bool CanUpgrade => _buildingConfig.CanUpgrade(Level.Value);
 
-        _level.Value += 1;
+        public void Upgrade()
+        {
+            if (CanUpgrade == false)
+                throw new System.Exception($"Can't upgrade building {_buildingConfig.BuildingName.English}");
+
+            _level.Value += 1;
+        }
     }
 }

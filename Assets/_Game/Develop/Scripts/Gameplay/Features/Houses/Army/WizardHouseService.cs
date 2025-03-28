@@ -2,22 +2,25 @@ using Assets.Gameplay.Building;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
-public class WizardHouseService : HouseBase
+namespace Assets.Gameplay.Building
 {
-    public WizardHouseService(BuildingConfig buildingConfig, int level) : base(buildingConfig, level)
+    public class WizardHouseService : HouseBase
     {
-    }
+        public WizardHouseService(BuildingConfig buildingConfig, int level)
+            : base(buildingConfig, level)
+        {
+        }
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+        // Start is called before the first frame update
+        void Start()
+        {
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        }
+
+        // Update is called once per frame
+        void Update()
+        {
+
+        }
     }
 }
