@@ -1,5 +1,7 @@
 using Assets.Gameplay.Building;
+using Assets.Gameplay.Building.Entity;
 using Assets.Gameplay.Data;
+using DI.Game.Develop.CommonServices.AssetsManagment;
 using DI.Game.Develop.CommonServices.SceneManagment;
 using DI.Game.Develop.DI;
 using System;
@@ -47,9 +49,19 @@ namespace DI.Game.Develop.Gameplay.Infrastructure
 
         private void RegistrateArmy(DIContainer container)
         {
-            //container.RegisterAsSingle(c => new ArcheryHouseService());
-            //container.RegisterAsSingle(c => new KnightHouseService());
-            //container.RegisterAsSingle(c => new WizardHouseService());
+            ResourcesAssetLoader loader = container.Resolve<ResourcesAssetLoader>();
+
+            EntityDataConfig archeryData = loader.LoadResource<EntityDataConfig>("Configs/Gameplay/ArmyEntity/Archery");
+            EntityDataConfig knightData = loader.LoadResource<EntityDataConfig>("Configs/Gameplay/ArmyEntity/Knight");
+            EntityDataConfig wizardData = loader.LoadResource<EntityDataConfig>("Configs/Gameplay/ArmyEntity/Witch");
+
+            BuildingConfig archeryBuildingConfig = loader.LoadResource<BuildingConfig>("Configs/Gameplay/Building/Archery");
+            BuildingConfig knightBuildingConfig = loader.LoadResource<BuildingConfig>("Configs/Gameplay/Building/Barracks");
+            BuildingConfig wizardBuildingConfig = loader.LoadResource<BuildingConfig>("Configs/Gameplay/Building/MagicUnion");
+
+            container.RegisterAsSingle(c => new ArcheryHouseService(archeryData, archeryBuildingConfig, 0));
+            container.RegisterAsSingle(c => new KnightHouseService(knightData, knightBuildingConfig, 0));
+            container.RegisterAsSingle(c => new WizardHouseService(wizardData, wizardBuildingConfig, 0));
 
             container.RegisterAsSingle(c => new ArmyHolderService(
                 container.Resolve<WizardHouseService>(),
