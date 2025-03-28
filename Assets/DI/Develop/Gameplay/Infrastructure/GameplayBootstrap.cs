@@ -4,7 +4,6 @@ using Assets.Gameplay.Data;
 using DI.Game.Develop.CommonServices.AssetsManagment;
 using DI.Game.Develop.CommonServices.SceneManagment;
 using DI.Game.Develop.DI;
-using System;
 using System.Collections;
 using UnityEngine;
 
@@ -22,7 +21,6 @@ namespace DI.Game.Develop.Gameplay.Infrastructure
             ProgressLoadData();
             ProcessInitialize();
                         
-
             yield return null;
         }
 
