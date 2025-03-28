@@ -1,3 +1,4 @@
+using Assets.Gameplay.Building;
 using Assets.Gameplay.Data;
 using DI.Game.Develop.CommonServices.SceneManagment;
 using DI.Game.Develop.DI;
@@ -29,6 +30,8 @@ namespace DI.Game.Develop.Gameplay.Infrastructure
             _container.RegisterAsSingle(c => new GameplaySaves());
             _container.RegisterAsSingle(c => new WeatherSystem());
 
+            RegistrateArmy(_container);
+
             _container.Initialize();
         }
 
@@ -40,6 +43,18 @@ namespace DI.Game.Develop.Gameplay.Infrastructure
         private void ProgressLoadData()
         {
 
+        }
+
+        private void RegistrateArmy(DIContainer container)
+        {
+            //container.RegisterAsSingle(c => new ArcheryHouseService());
+            //container.RegisterAsSingle(c => new KnightHouseService());
+            //container.RegisterAsSingle(c => new WizardHouseService());
+
+            container.RegisterAsSingle(c => new ArmyHolderService(
+                container.Resolve<WizardHouseService>(),
+                container.Resolve<KnightHouseService>(),
+                container.Resolve<ArcheryHouseService>()));
         }
     }
 }
