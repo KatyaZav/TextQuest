@@ -66,9 +66,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -267758133915289989, guid: 84356da12a8249c499e709f4475f15d8, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 4a0ab1fd2fca2bc4bb591978c6bff612, type: 3}
   m_Type: 0
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -91,8 +91,8 @@ MonoBehaviour:
   m_IgnoreLayout: 0
   m_MinWidth: -1
   m_MinHeight: -1
-  m_PreferredWidth: 70.1849
-  m_PreferredHeight: 72.286
+  m_PreferredWidth: 70
+  m_PreferredHeight: 70
   m_FlexibleWidth: -1
   m_FlexibleHeight: -1
   m_LayoutPriority: 1
@@ -189,12 +189,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Padding:
-    m_Left: 10
-    m_Right: 30
-    m_Top: 0
+    m_Left: 20
+    m_Right: 20
+    m_Top: 10
     m_Bottom: 0
-  m_ChildAlignment: 3
-  m_Spacing: 0
+  m_ChildAlignment: 0
+  m_Spacing: 20
   m_ChildForceExpandWidth: 1
   m_ChildForceExpandHeight: 1
   m_ChildControlWidth: 1

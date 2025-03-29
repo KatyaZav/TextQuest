@@ -44,6 +44,7 @@ namespace DI.Game.Develop.Gameplay.Infrastructure
                 _container.Resolve<GameplaySaves>(),
                 _container.Resolve<ArmyHolderService>(),
                 _container.Resolve<GameDataInfo>(),
+                _container.Resolve<ResourcesAssetLoader>(),
                 _container.Resolve<ReactiveUiFormatFabric>());
         }
         private void ProgressLoadData()
