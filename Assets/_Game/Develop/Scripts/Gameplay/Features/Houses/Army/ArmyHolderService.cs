@@ -4,25 +4,25 @@ namespace Assets.Gameplay.Building
 {
     public class ArmyHolderService : MonoBehaviour
     {
-        private WizardHouseService _wizardHouseService;
-        private KnightHouseService _knightHouseService;
-        private ArcheryHouseService _archeryHouseService;
+        public WizardHouseService WizardHouseService;
+        public KnightHouseService KnightHouseService;
+        public ArcheryHouseService ArcheryHouseService;
 
         public ArmyHolderService(WizardHouseService wizardHouseService,
             KnightHouseService knightHouseService, ArcheryHouseService archeryHouseService)
         {
-            _wizardHouseService = wizardHouseService;
-            _knightHouseService = knightHouseService;
-            _archeryHouseService = archeryHouseService;
+            WizardHouseService = wizardHouseService;
+            KnightHouseService = knightHouseService;
+            ArcheryHouseService = archeryHouseService;
         }
 
         public int GetAllHealth()
         {
             int health = 0;
 
-            health += _wizardHouseService.GetHealth();
-            health += _knightHouseService.GetHealth();
-            health += _archeryHouseService.GetHealth();
+            health += WizardHouseService.GetHealth();
+            health += KnightHouseService.GetHealth();
+            health += ArcheryHouseService.GetHealth();
 
             return health;
         }
@@ -31,9 +31,9 @@ namespace Assets.Gameplay.Building
         {
             int damage = 0;
 
-            damage += _wizardHouseService.GetDamage();
-            damage += _knightHouseService.GetDamage();
-            damage += _archeryHouseService.GetDamage();
+            damage += WizardHouseService.GetDamage();
+            damage += KnightHouseService.GetDamage();
+            damage += ArcheryHouseService.GetDamage();
 
             return damage;
         }

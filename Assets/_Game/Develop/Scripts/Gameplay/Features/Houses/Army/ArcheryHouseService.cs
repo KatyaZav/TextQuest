@@ -1,4 +1,5 @@
 using Assets.Gameplay.Building.Entity;
+using DI.Game.Develop.Utils.Reactive;
 
 namespace Assets.Gameplay.Building
 {
@@ -11,15 +12,15 @@ namespace Assets.Gameplay.Building
         public ArcheryHouseService(EntityDataConfig startEntity, BuildingConfig buildingConfig, int level) : base(buildingConfig, level)
         {
             _startEntity = startEntity;
-            EntityHolder = new EntityHolder(0);
+            EntityHolder = new EntityHolder(0, Level);
         }
         
-        public int Count => EntityHolder.Count;
+        public IReadOnlyVariable<int> Count => EntityHolder.Count;
 
         public int GetHealth() =>
-            _startEntity.Health * Count;
+            _startEntity.Health * Count.Value;
 
         public int GetDamage() =>
-            (_startEntity.Damage + Level.Value) * Count;
+            (_startEntity.Damage + Level.Value) * Count.Value;
     }
 }

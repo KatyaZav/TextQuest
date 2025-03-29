@@ -30,6 +30,9 @@ namespace DI.Game.Develop.Gameplay.Infrastructure
             _container.RegisterAsSingle(c => new GameplaySaves());
             _container.RegisterAsSingle(c => new WeatherSystem());
 
+            _container.RegisterAsSingle(c => new GameDataInfo(
+                _container.Resolve<ArmyHolderService>(), _container.Resolve<WeatherSystem>()));
+
             RegistrateArmy(_container);
 
             _container.Initialize();
@@ -38,7 +41,10 @@ namespace DI.Game.Develop.Gameplay.Infrastructure
         private void ProcessInitialize()
         {
             FindObjectOfType<TopView>().Init(
-                _container.Resolve<GameplaySaves>(), _container.Resolve<ReactiveUiFormatFabric>());
+                _container.Resolve<GameplaySaves>(),
+                _container.Resolve<ArmyHolderService>(),
+                _container.Resolve<GameDataInfo>(),
+                _container.Resolve<ReactiveUiFormatFabric>());
         }
         private void ProgressLoadData()
         {
