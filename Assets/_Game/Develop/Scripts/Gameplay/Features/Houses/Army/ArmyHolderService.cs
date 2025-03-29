@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace Assets.Gameplay.Building
 {
-    public class ArmyHolderService : MonoBehaviour
+    public class ArmyHolderService
     {
         public WizardHouseService WizardHouseService;
         public KnightHouseService KnightHouseService;

@@ -1,5 +1,6 @@
 using Assets.Gameplay.Building;
 using Assets.Gameplay.Data;
+using DI.Game.Develop.CommonServices.AssetsManagment;
 using System;
 using UnityEngine;
 using UnityEngine.UI;
@@ -26,14 +27,16 @@ public class TopView : MonoBehaviour, IDisposable
     private ArmyHolderService _armyHolderService;
     private ReactiveUiFormatFabric _fabric;
     private GameDataInfo _gameDataInfo;
+    private ResourcesAssetLoader _loader;
 
     public void Init(GameplaySaves saves, ArmyHolderService armyHolder,
-        GameDataInfo gameDataInfo, ReactiveUiFormatFabric formatFabric)
+        GameDataInfo gameDataInfo, ResourcesAssetLoader loader , ReactiveUiFormatFabric formatFabric)
     {
         _saves = saves;
         _armyHolderService = armyHolder;
         _fabric = formatFabric;
         _gameDataInfo = gameDataInfo;
+        _loader = loader;
 
         CreateInfoViews();
         CreateArmyViews();
